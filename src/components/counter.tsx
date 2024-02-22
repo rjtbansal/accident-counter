@@ -1,4 +1,4 @@
-import { EventHandler, useState } from 'react';
+import { useState } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -28,6 +28,7 @@ const Counter = () => {
             type="number"
             value={inputCount}
             // valueAsNumber is a nice addition to the target! No need to convert to number anymore!
+            // also try using event.target.value and TS will yell at you that its a string!
             onChange={(e) => setInputCount(e.target.valueAsNumber)}
           />
           <button type="submit">Update Counter</button>
